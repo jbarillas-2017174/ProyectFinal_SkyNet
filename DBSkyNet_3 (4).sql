@@ -2,7 +2,7 @@
 -- 				2017070--
 -- 				IN5AM--
 -- Creacion: 01/09/2021--
--- Modificaciones: 01/09/2021--				
+-- Modificaciones: 04/09/2021--				
 DROP DATABASE IF EXISTS DBProyectoVentas;
 CREATE DATABASE DBProyectoVentas;
 
