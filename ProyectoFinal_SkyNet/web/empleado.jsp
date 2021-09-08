@@ -73,6 +73,7 @@
                     <input type="submit" name="accion" value="Actualizar" class="btn btn-outline-dark">
                 </div>
             </form>      
+            
             <main style="display: block; margin-left: 40px; margin-top:15px">
                 <table class="table" style="width: 925px">
                     <thead class="thead-dark">
