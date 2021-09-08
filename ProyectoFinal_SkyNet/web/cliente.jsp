@@ -46,7 +46,7 @@
             </nav>
         </header>
 
-        <section style="display: flex; flex-wrap: w">
+        <section style="display: flex; flex-wrap: wrap; margin-top: 30px">
             <div style="border: 2px solid white; width: 550px; margin-top: 30px; margin-left: 20px; padding: 25px 0px 25px 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.4); font-family: 'Kaisei HarunoUmi', serif; font-size: 17px ">
 
                 <div>

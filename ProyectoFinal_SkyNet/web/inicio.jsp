@@ -20,20 +20,20 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li>
-                            <a class="nav-link" href="#">Producto<span class="sr-only">(current)</span></a>
+                            <a style="border: transparent" class="btn btn-outline-dark" href="#">Producto<span class="sr-only">(current)</span></a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Empleado</a>
+                            <a style="border: transparent" class="btn btn-outline-dark" href="#">Empleado</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Cliente</a>
+                            <a style="border: transparent" class="btn btn-outline-dark" href="#">Cliente</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Usuario
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <div style="border: transparent" class="dropdown-menu btn btn-outline-dark" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="#">Action</a>
                                 <a class="dropdown-item" href="#">Another action</a>
                                 <a class="dropdown-item" href="#">Something else here</a>
@@ -43,6 +43,7 @@
                 </div>
             </nav>
         </header>
+        
         <main style="padding-top: 10px; font-family: Times new Roman; font-size: 20px;">            
             <div class="row no-gutters bg-light position-relative" style="box-shadow: 4px 8px 16px 2px rgba(0,0,0,0.2); ">
                 <div class="col-md-6 mb-md-0 p-md-4">
