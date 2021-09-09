@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <title>Inicio</title>
     </head>
 
@@ -29,48 +29,60 @@
                         <li class="nav-item">
                             <a style="border: transparent" class="btn btn-outline-dark" href="#">Cliente</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Usuario
-                            </a>
-                            <div style="border: transparent" class="dropdown-menu btn btn-outline-dark" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                        <li>
+                            <div class="dropdown">
+                                <button style="border: none" class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Usuario
+                                </button>
+                                <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">
+                                        <img src="img/SkyNet1.png" alt="" width="40" style="border-radius: 30px"/>
+                                    </a>
+                                    <a class="dropdown-item" href="#">Nombre</a>
+                                    <a class="dropdown-item" href="#">usuario@gmail.com</a>
+                                    <div class="dropdown-divider"></div>
+                                    <form action="Validar" method="POST">
+                                        <button name="accion" name="Salir" class="dropdown-item" href="#">Salir</button>
+                                    </form>
+                                </div>
                             </div>
                         </li>
                     </ul>
                 </div>
             </nav>
         </header>
-        
-        <main style="padding-top: 10px; font-family: Times new Roman; font-size: 20px;">            
-            <div class="row no-gutters bg-light position-relative" style="box-shadow: 4px 8px 16px 2px rgba(0,0,0,0.2); ">
-                <div class="col-md-6 mb-md-0 p-md-4">
-                    <img src="img/foto1.jpg" class="w-100" alt="...">
-                </div>
-                <div class="col-md-6 position-static p-4 pl-md-0">
-                    <h3 class="mt-0">Lo que necesitas, lo tenemos.</h3>
-                    <p>Skynet te da la bienvenida, a través de nuestra página puedes acceder a nuestra variedad de productos y hacerte con la mejor calidad
-                        posible en nuestro país, todo electrodoméstico que quieras lo tenemos.</p>
-                    <a href="#" class="stretched-link">Tienda</a>
-                </div>
-            </div><br>
 
-            <div class="row no-gutters bg-light position-relative" style="box-shadow: 4px 8px 16px 2px rgba(0,0,0,0.2)">
-                <div class="col-md-6 mb-md-0 p-md-4">
-                    <img src="img/foto3.jpg" class="w-100" alt="...">
+
+                  
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top: 20px">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="img/foto1.jpg" style="height: 700px" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/foto4.jpg" style="height: 700px" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/foto5.jpg" style="height: 700px" alt="Third slide">
+                    </div>
                 </div>
-                <div class="col-md-6 position-static p-4 pl-md-0">
-                    <h3 class="mt-0">Siempre a tu alcance.</h3>
-                    <p>Skynet tiene la misión de proveerle los mejores productos de electrodomésticos para su hogar, tenemos la responsabilidad de poder
-                        ofrecerle a los Guatemaltecos el mejor servicio posible. Tenemos a nuestra disposición múltiples de profesionales que se harán caro
-                        de resolver todas sus dudas y poder ofrecerle una buena asistencia.</p>
-                    <a href="#" class="stretched-link">Tienda</a>
-                </div>
-            </div><br>
-        </main>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.onmin.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+       
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
 </html>
