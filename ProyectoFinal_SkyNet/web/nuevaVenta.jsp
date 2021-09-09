@@ -66,8 +66,8 @@
                         Datos del Cliente:
                     </label>
                     <div style="display: flex">
-                        <input type="text" class="input-group-text" style="width: 75px">
-                        <input type="submit" class="btn btn-outline-dark" value="Buscar Cliente">
+                        <input type="text" class="input-group-text" style="width: 82px" placeholder="Código">
+                        <input type="submit" class="btn btn-outline-dark" value="Buscar Cliente" style="width: 135px">
                         <input type="text" class="input-group-text" style="margin-left: 75px">        
                     </div>
                 </div>
@@ -77,20 +77,20 @@
                         Datos Producto:
                     </label>
                     <div style="display: flex">
-                        <input type="text" class="input-group-text" style="width: 100px">
+                        <input type="text" class="input-group-text" style="width: 100px" placeholder="Producto">
                         <input type="submit" class="btn btn-outline-dark" value="Buscar">
                         <input type="text" class="input-group-text" style="margin-left: 110px">
                     </div>
                     <div style="display: flex; margin-top: 30px">
-                        <input type="text" class="input-group-text" style="width: 200px;">
-                        <input type="text" class="input-group-text" style="width: 85px; margin-left: 90px">
-                        <input type="text" class="input-group-text" style="width: 75px; margin-left: 35px">
+                        <input type="text" class="input-group-text" style="width: 200px;" placeholder="Q.00.00">
+                        <input type="text" class="input-group-text" style="width: 85px; margin-left: 90px" placeholder="1">
+                        <input type="text" class="input-group-text" style="width: 75px; margin-left: 35px" placeholder="Stock">
                     </div>
                 </div>
                 <input style="margin-top: 25px;" type="submit" class="btn btn-outline-light" value="Agregar Producto">
             </div>
 
-            <main style="display: block;margin-left: 40px; margin-top:15px">
+            <form style="display: block;margin-left: 40px; margin-top:15px">
                 
                 <div style="width: 275px; margin-left: 575px "class="input-group">
                     <div class="input-group-prepend">
@@ -155,11 +155,11 @@
                 <div style="display: flex">
                     <input type="submit" name="accion" value="Generar Venta" class="btn btn-outline-light">
                     <input style="margin-left: 15px" type="submit" name="accion" value="Cancelar" class="btn btn-outline-dark">
-                    <input style="margin-left: 420px" type="text" readonly="readonly" class="input-group-text" Value="Q.">
+                    <input style="margin-left: 420px" type="text" readonly="readonly" class="input-group-text" placeholder="Q.00.00">
                 </div>
                 
 
-            </main>
+            </form>
         </section>
 
        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

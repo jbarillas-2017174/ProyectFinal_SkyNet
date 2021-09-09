@@ -29,6 +29,9 @@
                         <li class="nav-item">
                             <a style="border: transparent" class="btn btn-outline-dark" href="#">Cliente</a>
                         </li>
+                        <li class="nav-item">
+                            <a style="border: transparent" class="btn btn-outline-dark" href="#">Nueva Venta</a>
+                        </li>
                         <li>
                             <div class="dropdown">
                                 <button style="border: none" class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -62,13 +65,27 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="img/foto1.jpg" style="height: 700px" alt="First slide">
+                        <img class="d-block w-100" src="img/foto8.jpg" style="height: 700px" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block" style="color: white">
+                        <h5>Lo que necesitas, lo tenemos</h5>
+                        <p>Skynet te da la bienvenida, a través de nuestra página puedes acceder a nuestra variedad de productos y hacerte con la mejor calidad de nuestro país</p>
                     </div>
+                    </div>
+                    
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="img/foto4.jpg" style="height: 700px" alt="Second slide">
+                        <img class="d-block w-100" src="img/foto7.jpg" style="height: 700px" alt="Second slide">
+                        <div class="carousel-caption d-none d-md-block" style="color: white">
+                        <h5>Los mejores productos</h5>
+                        <p>Skynet tiene la misión de proveerle los mejores productos de electrodomésticos para su hogar, tenemos la responsabilidad de poder ofrecerle a los guatemaltecos el mejor servicio.</p>
                     </div>
+                    </div>
+                    
                     <div class="carousel-item">
                         <img class="d-block w-100" src="img/foto5.jpg" style="height: 700px" alt="Third slide">
+                        <div class="carousel-caption d-none d-md-block">
+                        <h5>Todo lo bueno lo encontraras en SkyNet</h5>
+                        <p>Tenemos a nuestra disposición múltiples de profesionales que se harán cargo de resolver todas sus dudas y poder ofrecerle una buena asistencia.</p>
+                    </div>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

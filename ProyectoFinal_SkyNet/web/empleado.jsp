@@ -31,7 +31,11 @@
                         <li class="nav-item">
                             <a style="border: transparent" class="btn btn-outline-dark" href="#">Cliente</a>
                         </li>
-                        <li>
+                        <li class="nav-item">
+                            <a style="border: transparent" class="btn btn-outline-dark" href="#">Nueva Venta</a>
+                        </li>
+                        
+                            
                             <div class="dropdown">
                                 <button style="border: none" class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Usuario
