@@ -68,7 +68,7 @@
                         <img class="d-block w-100" src="img/foto8.jpg" style="height: 700px" alt="First slide">
                         <div class="carousel-caption d-none d-md-block" style="color: white">
                         <h5>Lo que necesitas, lo tenemos</h5>
-                        <p>Skynet te da la bienvenida, a través de nuestra página puedes acceder a nuestra variedad de productos y hacerte con la mejor calidad de nuestro país</p>
+                        <p>Skynet te da la bienvenida, a través de nuestra página puedes acceder a nuestra variedad de productos y hacerte con la mejor calidad de nuestro país.</p>
                     </div>
                     </div>
                     
