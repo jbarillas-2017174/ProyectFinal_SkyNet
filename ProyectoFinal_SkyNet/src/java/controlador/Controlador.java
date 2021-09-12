@@ -12,10 +12,14 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelo.Cliente;
+import modelo.ClienteDAO;
 import modelo.Empleado;
 import modelo.EmpleadoDAO;
 import modelo.Producto;
 import modelo.ProductoDAO;
+import modelo.Venta;
+import modelo.VentaDAO;
 
 /**
  *
@@ -26,6 +30,10 @@ public class Controlador extends HttpServlet {
     EmpleadoDAO empleadoDao = new EmpleadoDAO();
     Producto producto = new Producto();
     ProductoDAO productoDao = new ProductoDAO();
+    Cliente cliente = new Cliente();
+    ClienteDAO clienteDao = new ClienteDAO();
+    Venta venta = new Venta();
+    VentaDAO ventaDao = new VentaDAO(); 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -42,31 +50,64 @@ public class Controlador extends HttpServlet {
         if(menu.equals("Principal")){
             request.getRequestDispatcher("inicio.jsp").forward(request, response);
         }else if(menu.equals("Producto")){
-            switch (accion){
+            switch(accion){
                 case "Listar":
-                           
+                    List listaProducto = productoDao.listar();
+                    request.setAttribute("producto", listaProducto);
                     break;
                 case "Agregar":
-                    
                     break;
                 case "Editar":
-                    
                     break;
                 case "Actualizar":
-                    
                     break;
                 case "Eliminar":
-                    
                     break;
             }
             request.getRequestDispatcher("producto.jsp").forward(request, response);
         }else if(menu.equals("Cliente")){
+            switch(accion){
+                case "Listar":
+                    List listaCliente = clienteDao.listar();
+                    request.setAttribute("cliente", listaCliente);
+                    break;
+                case "Agregar":
+                    break;
+                case "Editar":
+                    break;
+                case "Actualizar":
+                    break;
+                case "Eliminar":
+                    break;
+            }
             request.getRequestDispatcher("cliente.jsp").forward(request, response);
         }else if(menu.equals("Empleado")){
+            switch(accion){
+                case "Listar":
+                    List listaEmpleados = empleadoDao.listar();
+                    request.setAttribute("empleado", listaEmpleados);
+                    break;
+                case "Agregar":
+                    break;
+                case "Editar":
+                    break;
+                case "Actualizar":
+                    break;
+                case "Eliminar":
+                    break;
+            }
+            
             request.getRequestDispatcher("empleado.jsp").forward(request, response);
         }else if(menu.equals("Venta")){
+            switch(accion){
+                case "Listar":
+                    List listaVenta = ventaDao.listar();
+                    request.setAttribute("venta", listaVenta);
+                    break;
+            }
             request.getRequestDispatcher("nuevaVenta.jsp").forward(request, response);
         }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

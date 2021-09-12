@@ -1,4 +1,5 @@
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -91,39 +92,23 @@
                             <th scope="col">Nombres</th>
                             <th scope="col">Dirección</th>
                             <th scope="col">Acciones</th>
+                            <th scope="col">Estado</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <c:forEach var="cliente" items="${cliente}">
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Fernando</td>
-                            <td>Emanuel</td>
-                            <td>Diaz</td>                           
+                            <td>${cliente.getCodigoCliente()}</td>
+                            <td>${cliente.getDPICliente()}</td>
+                            <td>${cliente.getNombreCliente()}</td>
+                            <td>${cliente.getDireccionCliente()}</td> 
+                            <td>${cliente.getEstadoCliente()}</td>
                             <td align="center">
                                 <button type="button" class="btn btn-outline-light">Editar</button>
                                 <button type="button" class="btn btn-outline-dark">Eliminar</button>
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Refrigerador</td>
-                            <td>Q4500.00</td>
-                            <td>10</td>                          
-                            <td align="center">
-                                <button type="button" class="btn btn-outline-light">Editar</button>
-                                <button type="button" class="btn btn-outline-dark">Eliminar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>                        
-                            <td align="center">
-                                <button type="button" class="btn btn-outline-light">Editar</button>
-                                <button type="button" class="btn btn-outline-dark">Eliminar</button>
-                            </td>
-                        </tr>
+                        </c:forEach>
                     </tbody>
                 </table>
             </main>

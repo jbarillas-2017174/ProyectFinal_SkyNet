@@ -20,17 +20,17 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li>
-                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Producto">Producto<span class="sr-only">(current)</span></a>
+                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Producto&accion=Listar">Producto<span class="sr-only">(current)</span></a>
                         </li>
              
                         <li class="nav-item">
-                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Empleado">Empleado</a>
+                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Empleado&accion=Listar">Empleado</a>
                         </li>
                         <li class="nav-item">
-                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Cliente">Cliente</a>
+                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Cliente&accion=Listar">Cliente</a>
                         </li>
                         <li class="nav-item">
-                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Venta">Nueva Venta</a>
+                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Venta&accion=Listar">Nueva Venta</a>
                         </li>
                         <li>
                             <div class="dropdown">
