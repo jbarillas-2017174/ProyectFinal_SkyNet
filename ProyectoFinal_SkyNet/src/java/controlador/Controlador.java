@@ -7,17 +7,25 @@ package controlador;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelo.Empleado;
+import modelo.EmpleadoDAO;
+import modelo.Producto;
+import modelo.ProductoDAO;
 
 /**
  *
  * @author FAM CASTELLANOS
  */
 public class Controlador extends HttpServlet {
-
+    Empleado empleado = new Empleado();
+    EmpleadoDAO empleadoDao = new EmpleadoDAO();
+    Producto producto = new Producto();
+    ProductoDAO productoDao = new ProductoDAO();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -30,8 +38,34 @@ public class Controlador extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String menu = request.getParameter("menu");
+        String accion = request.getParameter("accion");
         if(menu.equals("Principal")){
             request.getRequestDispatcher("inicio.jsp").forward(request, response);
+        }else if(menu.equals("Producto")){
+            switch (accion){
+                case "Listar":
+                           
+                    break;
+                case "Agregar":
+                    
+                    break;
+                case "Editar":
+                    
+                    break;
+                case "Actualizar":
+                    
+                    break;
+                case "Eliminar":
+                    
+                    break;
+            }
+            request.getRequestDispatcher("producto.jsp").forward(request, response);
+        }else if(menu.equals("Cliente")){
+            request.getRequestDispatcher("cliente.jsp").forward(request, response);
+        }else if(menu.equals("Empleado")){
+            request.getRequestDispatcher("empleado.jsp").forward(request, response);
+        }else if(menu.equals("Venta")){
+            request.getRequestDispatcher("nuevaVenta.jsp").forward(request, response);
         }
     }
 
