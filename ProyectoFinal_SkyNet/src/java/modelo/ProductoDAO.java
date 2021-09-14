@@ -31,6 +31,7 @@ public class ProductoDAO {
                 pro.setPrecioProducto(rs.getDouble(3));
                 pro.setStock(rs.getInt(4));
                 pro.setEstadoProducto(rs.getString(5));
+                listaProducto.add(pro);
             }
         }
         catch(Exception e){
