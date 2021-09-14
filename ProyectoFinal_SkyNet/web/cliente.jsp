@@ -23,17 +23,17 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li>
-                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Producto">Producto<span class="sr-only">(current)</span></a>
+                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Producto&accion=Listar">Producto<span class="sr-only">(current)</span></a>
                         </li>
 
                         <li class="nav-item">
-                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Empleado">Empleado</a>
+                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Empleado&accion=Listar">Empleado</a>
                         </li>
                         <li class="nav-item">
-                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Cliente">Cliente</a>
+                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Cliente&accion=Listar">Cliente</a>
                         </li>
                         <li class="nav-item">
-                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Venta">Nueva Venta</a>
+                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Venta&accion=Listar">Nueva Venta</a>
                         </li>
                         <li>
                             <div class="dropdown">
@@ -59,22 +59,22 @@
         </header>
 
         <section style="display: flex; flex-wrap: wrap; margin-top: 30px">
-            <form style="width: 500px; border: 1px solid white; padding: 40px 30px 40px 30px; margin-left: 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.5);font-family: 'Kaisei HarunoUmi', serif; font-size: 20px ">
+            <form style="width: 500px; border: 1px solid white; padding: 40px 30px 40px 30px; margin-left: 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.5);font-family: 'Kaisei HarunoUmi', serif; font-size: 20px " action="Controlador?menu=Cliente" method="POST">
                 <div class="form-group">
-                    <label for="formGroupExampleInput">DPI</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="DPI">
+                    <label>DPI</label>
+                    <input type="text" class="form-control" name="txtDPICliente" value="${Cliente.getDPICliente()}" placeholder="DPI">
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Nombres</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombres">
+                    <label>Nombres</label>
+                    <input type="text" class="form-control" name="txtNombresCliente" value="${Cliente.getNombreCliente()}" placeholder="Nombres">
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Dirección</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Telefono">
+                    <label>Dirección</label>
+                    <input type="text" class="form-control" name="txtTelefonoCliente" value="${Cliente.getDireccionCliente()}" placeholder="Dirección">
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Estado</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Estado">
+                    <label>Estado</label>
+                    <input type="text" class="form-control" name="txtEstadoCliente" value="${Cliente.getEstadoCliente()}" placeholder="Estado">
                 </div>           
                 <div>
                     <input type="submit" name="accion" value="Agregar" class="btn btn-outline-light">
@@ -104,8 +104,8 @@
                             <td>${cliente.getDireccionCliente()}</td> 
                             <td>${cliente.getEstadoCliente()}</td>
                             <td align="center">
-                                <button type="button" class="btn btn-outline-light">Editar</button>
-                                <button type="button" class="btn btn-outline-dark">Eliminar</button>
+                                <a href="Controlador?menu=Cliente&accion=Editar&codigoCliente=${cliente.getCodigoCliente()}" class="btn btn-outline-light">Editar</a>
+                                <a href="Controlador?menu=Cliente&accion=Eliminar&codigoCliente=${cliente.getCodigoCliente()}" class="btn btn-outline-dark" >Eliminar</a>
                             </td>
                         </tr>
                         </c:forEach>
