@@ -79,6 +79,7 @@
                 </div>
                 <div>
                     <button type="submit" name="accion" value="Agregar" class="btn btn-outline-light">Agregar</button>
+                    <button type="submit" name="accion" value="Actualizar" class="btn btn-outline-light">Actualizar</button>
                 </div>
             </form>      
             <main style="display: block; margin-left: 40px; margin-top:15px">
@@ -104,7 +105,7 @@
                             <td>${producto.getEstadoProducto()}</td> 
                             <td align="center">
                                 <a href="Controlador?menu=Producto&accion=Editar&codigoProducto=${producto.getCodigoProducto()}" class="btn btn-outline-light">Editar</a>
-                                <a type="button" class="btn btn-outline-dark">Eliminar</a>
+                                <a href="Controlador?menu=Producto&accion=Eliminar&codigoProducto=${producto.getCodigoProducto()}" class="btn btn-outline-dark">Eliminar</a>
                             </td>
                         </tr>
                         </c:forEach>

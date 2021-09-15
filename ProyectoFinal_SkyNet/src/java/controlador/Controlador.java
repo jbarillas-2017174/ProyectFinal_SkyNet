@@ -81,8 +81,22 @@ public class Controlador extends HttpServlet {
                     request.getRequestDispatcher("Controlador?menu=Producto&accion=Listar").forward(request, response);
                     break;
                 case "Actualizar":
+                    String nameProd = request.getParameter("txtNombreProducto");
+                    String productoPrecio = request.getParameter("txtPrecio");
+                    String stoc = request.getParameter("txtStock");
+                    String est = request.getParameter("txtEstado");
+                    producto.setNombresProducto(nameProd);
+                    producto.setPrecioProducto(Double.parseDouble(productoPrecio));
+                    producto.setStock(Integer.parseInt(stoc));
+                    producto.setEstadoProducto(est);
+                    producto.setCodigoProducto(codProducto);
+                    productoDao.actualizar(producto);
+                    request.getRequestDispatcher("Controlador?menu=Producto&accion=Listar").forward(request, response);
                     break;
                 case "Eliminar":
+                    codProducto = Integer.parseInt(request.getParameter("codigoProducto"));
+                    productoDao.eliminar(codProducto);
+                    request.getRequestDispatcher("Controlador?menu=Producto&accion=Listar").forward(request, response);
                     break;
             }
             request.getRequestDispatcher("producto.jsp").forward(request, response);
@@ -115,12 +129,13 @@ public class Controlador extends HttpServlet {
                 case "Actualizar":
                     String DPIClient = request.getParameter("txtDPICliente");
                     String nombreCliente = request.getParameter("txtNombresCliente");
-                    String direccionClient = request.getParameter("txtTelenonoCliente");
+                    String direccionClient = request.getParameter("txtTelefonoCliente");
                     String estCliente = request.getParameter("txtEstadoCliente");
                     cliente.setDPICliente(DPIClient);
                     cliente.setNombreCliente(nombreCliente);
                     cliente.setDireccionCliente(direccionClient);
                     cliente.setEstadoCliente(estCliente);
+                    cliente.setCodigoCliente(codCliente);
                     clienteDao.actualizar(cliente);
                     request.getRequestDispatcher("Controlador?menu=Cliente&accion=Listar").forward(request, response);
                     break ;
@@ -160,6 +175,19 @@ public class Controlador extends HttpServlet {
                     request.getRequestDispatcher("Controlador?menu=Empleado&accion=Listar").forward(request, response);
                     break;
                 case "Actualizar":
+                    String DPIEmp = request.getParameter("txtDPIEmpleado");
+                    String nombre = request.getParameter("txtNombresEmpleado");
+                    String tel = request.getParameter("txtTelefonoEmpleado");
+                    String estado = request.getParameter("txtEstado");
+                    String usuario = request.getParameter("txtUsuario");
+                    empleado.setDPIEmpleado(DPIEmp);
+                    empleado.setNombreEmpleado(nombre);
+                    empleado.setTelefonoEmpleado(tel);
+                    empleado.setEstadoEmpleado(estado);
+                    empleado.setUser(usuario);
+                    empleado.setCodigoEmpleado(codEmpleado);
+                    empleadoDao.actualizar(empleado);
+                    request.getRequestDispatcher("Controlador?menu=Empleado&accion=Listar").forward(request, response);
                     break;
                 case "Eliminar":
                     codEmpleado = Integer.parseInt(request.getParameter("codigoEmpleado"));
