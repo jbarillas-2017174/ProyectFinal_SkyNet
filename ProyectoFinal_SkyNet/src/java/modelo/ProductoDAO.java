@@ -90,8 +90,8 @@ public class ProductoDAO {
             ps.setInt(3, pro.getStock());
             ps.setString(4, pro.getEstadoProducto());
             ps.setInt(5, pro.getCodigoProducto());
-        }
-        catch(Exception e){
+            ps.executeUpdate();
+        }catch(Exception e){
             e.printStackTrace();
         }
         return resp;
@@ -99,13 +99,12 @@ public class ProductoDAO {
     
     //Eliminar
     public void eliminar(int id){
-        String sql = "DELETE FROM Cliente WHERE codigoCliente ="+id;
+        String sql = "DELETE FROM Producto WHERE codigoProducto = "+id;
         try{
             con = cn.Conexion();
             ps = con.prepareStatement(sql);
-            ps.executeQuery();
-        }
-        catch(Exception e){
+            ps.executeUpdate();
+        }catch(Exception e){
             e.printStackTrace();
         }
     }

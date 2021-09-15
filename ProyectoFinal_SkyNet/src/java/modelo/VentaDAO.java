@@ -86,7 +86,7 @@ public class VentaDAO {
         try{
             con = cn.Conexion();
             ps = con.prepareStatement(sql);
-            ps.executeQuery();
+            ps.executeUpdate();
         }catch(Exception e){
             e.printStackTrace();
         }
