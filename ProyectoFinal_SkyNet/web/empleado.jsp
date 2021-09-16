@@ -1,4 +1,5 @@
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,37 +16,36 @@
         </h1>
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: transparent!important; box-shadow: 0 4px 8px rgba(0,0,0,0.3); border: 1px solid whitesmoke">
-                <a class="navbar-brand" href="#">Home</a>
+                <a class="navbar-brand" href="Controlador?menu=Principal">Home</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li>
-                            <a style="border: transparent" class="btn btn-outline-dark" href="#">Producto<span class="sr-only">(current)</span></a>
+                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Producto&accion=Listar">Producto<span class="sr-only">(current)</span></a>
                         </li>
 
                         <li class="nav-item">
-                            <a style="border: transparent" class="btn btn-outline-dark" href="#">Empleado</a>
+                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Empleado&accion=Listar">Empleado</a>
                         </li>
                         <li class="nav-item">
-                            <a style="border: transparent" class="btn btn-outline-dark" href="#">Cliente</a>
+                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Cliente&accion=Listar">Cliente</a>
                         </li>
                         <li class="nav-item">
-                            <a style="border: transparent" class="btn btn-outline-dark" href="#">Nueva Venta</a>
+                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Venta&accion=Listar">Nueva Venta</a>
                         </li>
-                        
-                            
+                        <li>
                             <div class="dropdown">
                                 <button style="border: none" class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Usuario
+                                    ${usuario.getNombreEmpleado()}
                                 </button>
                                 <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="#">
                                         <img src="img/SkyNet1.png" alt="" width="40" style="border-radius: 30px"/>
                                     </a>
-                                    <a class="dropdown-item" href="#">Nombre</a>
-                                    <a class="dropdown-item" href="#">usuario@gmail.com</a>
+                                    <a class="dropdown-item" href="#">${usuario.getNombreEmpleado()}</a>
+                                    <a class="dropdown-item" href="#">${usuario.getUser()}@gmail.com</a>
                                     <div class="dropdown-divider"></div>
                                     <form action="Validar" method="POST">
                                         <button name="accion" name="Salir" class="dropdown-item" href="#">Salir</button>
@@ -59,26 +59,26 @@
         </header>
 
         <section style="display: flex; flex-wrap: wrap; margin-top: 30px">
-            <form style="width: 500px; border: 1px solid white; padding: 40px 30px 40px 30px; margin-left: 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.5);font-family: 'Kaisei HarunoUmi', serif; font-size: 20px ">
+            <form style="width: 500px; border: 1px solid white; padding: 40px 30px 40px 30px; margin-left: 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.5);font-family: 'Kaisei HarunoUmi', serif; font-size: 20px " var="empleado" action="Controlador?menu=Empleado" method="POST">
                 <div class="form-group">
-                    <label for="formGroupExampleInput">DPI</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="DPI">
+                    <label>DPI</label>
+                    <input type="text" value="${Empleado.getDPIEmpleado()}" name="txtDPIEmpleado" class="form-control"  placeholder="DPI">
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Nombres</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombres">
+                    <label>Nombres</label>
+                    <input type="text" name="txtNombresEmpleado" class="form-control" value="${Empleado.getNombreEmpleado()}" placeholder="Nombres">
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Teléfono</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Telefono">
+                    <label>Teléfono</label>
+                    <input type="text" name="txtTelefonoEmpleado" class="form-control" value="${Empleado.getTelefonoEmpleado()}" placeholder="Telefono">
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Estado</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Estado">
+                    <label>Estado</label>
+                    <input type="text" name="txtEstado" class="form-control" value="${Empleado.getEstadoEmpleado()}" placeholder="Estado">
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Usuario</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Usuario">
+                    <label>Usuario</label>
+                    <input type="text" name="txtUsuario" class="form-control" value="${Empleado.getUser()}" placeholder="Usuario">
                 </div>
                 <div>
                     <input type="submit" name="accion" value="Agregar" class="btn btn-outline-light">
@@ -101,42 +101,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Fernando</td>
-                            <td>Emanuel</td>
-                            <td>Diaz</td>
-                            <td>Morales</td> 
-                            <td>Morales</td> 
-                            <td align="center">
-                                <button type="button" class="btn btn-outline-light">Editar</button>
-                                <button type="button" class="btn btn-outline-dark">Eliminar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Refrigerador</td>
-                            <td>Q4500.00</td>
-                            <td>10</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td align="center">
-                                <button type="button" class="btn btn-outline-light">Editar</button>
-                                <button type="button" class="btn btn-outline-dark">Eliminar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>pendiente</td>
-                            <td>1</td>
-                            <td align="center">
-                                <button type="button" class="btn btn-outline-light">Editar</button>
-                                <button type="button" class="btn btn-outline-dark">Eliminar</button>
-                            </td>
-                        </tr>
+                        <c:forEach var="empleado" items="${empleado}">
+                            <tr>
+                                <td>${empleado.getCodigoEmpleado()}</td>
+                                <td>${empleado.getDPIEmpleado()}</td>
+                                <td>${empleado.getNombreEmpleado()}</td>
+                                <td>${empleado.getTelefonoEmpleado()}</td>
+                                <td>${empleado.getEstadoEmpleado()}</td> 
+                                <td>${empleado.getUser()}</td> 
+                                <td align="center">
+                                    <a href="Controlador?menu=Empleado&accion=Editar&codigoEmpleado=${empleado.getCodigoEmpleado()}" class="btn btn-outline-light">Editar</a>
+                                    <a href="Controlador?menu=Empleado&accion=Eliminar&codigoEmpleado=${empleado.getCodigoEmpleado()}" class="btn btn-outline-dark">Eliminar</a>
+                                </td>
+                            </tr>
+                        </c:forEach>
                     </tbody>
                 </table>
             </main>
