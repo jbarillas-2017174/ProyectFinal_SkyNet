@@ -1,27 +1,37 @@
 package modelo;
 
-import java.util.Date;
+
 
 public class Venta {
-    private int codigoVenta;
-    private int codigoCliente;
-    private int codigoEmpleado;
-    private String numeroSerie;
-    private Date fechaVenta;
-    private double monto;
-    private String estadoVenta;
+   private int codigoVenta;
+   private int item;
+   private int codigoCliente;
+   private int codigoEmpleado;
+   private int codigoProducto;
+   private String numeroSerie;
+   private String descripcionProd;
+   private String fecha;
+   private int cantidad;
+   private double subTotal;
+   private double monto;
+   private String estado;
 
     public Venta() {
     }
 
-    public Venta(int codigoVenta, int codigoCliente, int codigoEmpleado, String numeroSerie, Date fechaVenta, double monto, String estadoVenta) {
+    public Venta(int codigoVenta, int item, int codigoCliente, int codigoEmpleado, int codigoProducto, String numeroSerie, String descripcionProd, String fecha, int cantidad, double subTotal, double monto, String estado) {
         this.codigoVenta = codigoVenta;
+        this.item = item;
         this.codigoCliente = codigoCliente;
         this.codigoEmpleado = codigoEmpleado;
+        this.codigoProducto = codigoProducto;
         this.numeroSerie = numeroSerie;
-        this.fechaVenta = fechaVenta;
+        this.descripcionProd = descripcionProd;
+        this.fecha = fecha;
+        this.cantidad = cantidad;
+        this.subTotal = subTotal;
         this.monto = monto;
-        this.estadoVenta = estadoVenta;
+        this.estado = estado;
     }
 
     public int getCodigoVenta() {
@@ -30,6 +40,14 @@ public class Venta {
 
     public void setCodigoVenta(int codigoVenta) {
         this.codigoVenta = codigoVenta;
+    }
+
+    public int getItem() {
+        return item;
+    }
+
+    public void setItem(int item) {
+        this.item = item;
     }
 
     public int getCodigoCliente() {
@@ -48,6 +66,14 @@ public class Venta {
         this.codigoEmpleado = codigoEmpleado;
     }
 
+    public int getCodigoProducto() {
+        return codigoProducto;
+    }
+
+    public void setCodigoProducto(int codigoProducto) {
+        this.codigoProducto = codigoProducto;
+    }
+
     public String getNumeroSerie() {
         return numeroSerie;
     }
@@ -56,12 +82,36 @@ public class Venta {
         this.numeroSerie = numeroSerie;
     }
 
-    public Date getFechaVenta() {
-        return fechaVenta;
+    public String getDescripcionProd() {
+        return descripcionProd;
     }
 
-    public void setFechaVenta(Date fechaVenta) {
-        this.fechaVenta = fechaVenta;
+    public void setDescripcionProd(String descripcionProd) {
+        this.descripcionProd = descripcionProd;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public double getSubTotal() {
+        return subTotal;
+    }
+
+    public void setSubTotal(double subTotal) {
+        this.subTotal = subTotal;
     }
 
     public double getMonto() {
@@ -72,14 +122,14 @@ public class Venta {
         this.monto = monto;
     }
 
-    public String getEstadoVenta() {
-        return estadoVenta;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setEstadoVenta(String estadoVenta) {
-        this.estadoVenta = estadoVenta;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
     
-    
-    
+   
+   
 }
