@@ -40,7 +40,7 @@
                                         <button type="submit" name="accion" value="BuscarProducto" class="btn btn-outline-dark">Buscar</button>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" name="txtCodigoCliente" class="form-control" value="${producto.getNombresProducto()}" placeholder="Producto">
+                                        <input type="text" name="txtNombresProducto" class="form-control" value="${producto.getNombresProducto()}" placeholder="Producto">
                                     </div>
                                 </div>
                                 <div>
@@ -72,7 +72,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">Serie:</span>
                     </div>
-                    <input type="text" aria-label="First name" class="form-control">                 
+                    <input type="text" aria-label="First name"  class="form-control">                 
                 </div><br>
 
                 <table class="table" style="width: 850px">
@@ -109,7 +109,7 @@
                 <div style="display: flex">
                     <input type="submit" name="accion" value="Generar Venta" class="btn btn-outline-light">
                     <input style="margin-left: 15px" type="submit" name="accion" value="Cancelar" class="btn btn-outline-dark">
-                    <input style="margin-left: 420px" type="text" readonly="readonly" class="input-group-text" placeholder="Q.00.00">
+                    <input style="margin-left: 420px" type="text" readonly="readonly" value="${totalPagar}" class="input-group-text" placeholder="Q.00.00">
                 </div>
             </form>
     </div>

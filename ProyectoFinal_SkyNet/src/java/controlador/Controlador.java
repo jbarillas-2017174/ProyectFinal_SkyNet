@@ -226,7 +226,7 @@ public class Controlador extends HttpServlet {
                     totalPagar = 0.0;
                     item = item + 1;
                     codPro = producto.getCodigoProducto();
-                    descripcion = request.getParameter("txtNombreProducto");
+                    descripcion = request.getParameter("txtNombresProducto");
                     precio = Double.parseDouble(request.getParameter("txtPrecio"));
                     cantid = Integer.parseInt(request.getParameter("txtCantidad"));
                     subTotal = precio * cantid;
