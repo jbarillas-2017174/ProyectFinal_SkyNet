@@ -33,7 +33,7 @@
                             <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Cliente&accion=Listar">Cliente</a>
                         </li>
                         <li class="nav-item">
-                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Venta&accion=Listar">Nueva Venta</a>
+                            <a style="border: transparent" class="btn btn-outline-dark" href="Controlador?menu=Venta&accion=default">Nueva Venta</a>
                         </li>
                         <li>
                             <div class="dropdown">
